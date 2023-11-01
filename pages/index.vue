@@ -14,6 +14,7 @@ import { useInfiniteScroll } from "@vueuse/core";
 const movies = useFavorites();
 const el = ref<HTMLElement | null>(null);
 const page = ref(1);
+const isScrolling = ref(false); // variável booleana para verificar se a função já foi executada
 
 onMounted(() => {
   getMoviesList();
@@ -30,10 +31,14 @@ const getMoviesList = async () => {
 
 const getMoviesOnScroll = async () => {
   try {
-    page.value++;
-    const { data } = await movies.getMovies(page.value);
-
-    movies.popularMovies.push(...data);
+    if (!isScrolling.value) {
+      // verifica se a função já foi executada
+      isScrolling.value = true; // define a variável como true para indicar que a função está sendo executada
+      page.value++;
+      const { data } = await movies.getMovies(page.value);
+      movies.popularMovies.push(...data);
+      isScrolling.value = false; // define a variável como false para indicar que a função foi executada
+    }
   } catch (error) {
     console.log(error);
   }
