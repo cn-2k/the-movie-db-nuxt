@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a>
-    <img alt="Vue.js" src="https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82" />
+    <img alt="Nuxt" src="https://img.shields.io/badge/Nuxt-002E3B?style=for-the-badge&logo=nuxtdotjs&logoColor=#00DC82" />
   <a/>
     <img alt="TypeScript" src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"/>
     <img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/>
@@ -23,7 +23,9 @@
 
 A aplicação consome a API oficial do The Movie DB e exibe em tela uma lista de filmes populares, onde o usuário pode favoritar/desfavoritar filmes e visualizar mais informações sobre algum filme selecionado. Além disso, todos os favoritos são salvos no Local Storage do navegador, fazendo que caso o usuário saia da aplicação ou feche o navegador, não perca seus favoritos.
 
-Demo: https://the-movie-db-vuejs.vercel.app/#/
+Demo: https://the-movie-db-nuxt.vercel.app/
+
+Versão Vue.js: https://github.com/cn-2k/the-movie-db-vuejs
 
 ## Tecnologias
 
