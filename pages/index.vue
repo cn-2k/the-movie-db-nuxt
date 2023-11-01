@@ -39,18 +39,12 @@ const getMoviesOnScroll = async () => {
   }
 };
 
-useInfiniteScroll(
-  el,
-  () => {
-    if (movies.searchMovieQuery) {
-      return;
-    }
-    getMoviesOnScroll();
-  },
-  {
-    throttle: 200,
-  },
-);
+useInfiniteScroll(el, () => {
+  if (movies.searchMovieQuery) {
+    return;
+  }
+  getMoviesOnScroll();
+});
 </script>
 
 <style></style>

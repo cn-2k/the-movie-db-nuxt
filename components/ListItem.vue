@@ -27,7 +27,9 @@
               />
             </svg>
           </dt>
-          <dd class="font-bold text-zinc-600">{{ movie.vote_average }}</dd>
+          <dd class="font-bold text-zinc-600">
+            {{ movie.vote_average.toFixed(1) }}
+          </dd>
         </div>
         <div>
           <dt class="sr-only">Rating</dt>
